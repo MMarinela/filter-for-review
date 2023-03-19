@@ -1,0 +1,31 @@
+<div class="container">
+    <h1 th:if="${hasError}" th:text="${error}"></h1>
+</div>
+<div class="container">
+    <form class="form-signin mt-xl-5" method="post" action="/filter">
+        <h2 class="form-signin-heading">Filter reviews</h2>
+
+        <select id="rating" name="rating">
+            <option value="Highest First">Highest First</option>
+            <option value="Lowest First">Lowest First</option>
+        </select>
+
+        <select id="minimum_rating" name="minimum_rating">
+            <option value="5">5</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1</option>
+        </select>
+        <select id="order_by_date" name="order_by_date">
+            <option value="Newest First">Newest First</option>
+            <option value="Oldest First">Oldest First</option>
+        </select>
+        <select id="prioritize_by_text" name="prioritize_by_text">
+            <option value="YES">YES</option>
+            <option value="NO">NO</option>
+        </select>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Filter</button>
+    </form>
+</div>
